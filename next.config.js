@@ -5,16 +5,16 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
   
-  // Image optimization
+  // Static export for GitHub Pages
+  output: 'export',
+  trailingSlash: true,
   images: {
-    formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    unoptimized: true,
   },
   
-  // Compression
-  compress: true,
+  // Base path for GitHub Pages (replace with your repo name)
+  basePath: '/personal-blog-portfolio',
+  assetPrefix: '/personal-blog-portfolio/',
   
   // Production optimizations
   productionBrowserSourceMaps: false,
