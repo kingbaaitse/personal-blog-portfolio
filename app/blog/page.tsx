@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
+import ScrollReveal from '@/components/ScrollReveal'
+import BlogIllustration from '@/components/illustrations/BlogIllustration'
 
 const blogPosts = [
   {
     slug: 'learning-journey',
     title: 'My Learning Journey: Adapting to Tertiary Education',
     excerpt: 'Reflecting on time management, study habits, and developing a growth mindset in university...',
-    date: 'November 2024',
+    date: 'November 2025',
     readTime: '5 min read',
     category: 'Personal Growth',
   },
@@ -14,18 +16,43 @@ const blogPosts = [
     slug: 'group-work-reflection',
     title: 'Navigating Group Dynamics: A Tuckman Model Reflection',
     excerpt: 'An in-depth look at my group work experience this semester through the lens of Tuckman\'s stages...',
-    date: 'November 2024',
+    date: 'November 2025',
     readTime: '6 min read',
     category: 'Collaboration',
+  },
+  {
+    slug: 'data-analytics-transforming-business',
+    title: 'The Power of Data Analytics: Transforming Business Intelligence',
+    excerpt: 'Exploring how data analytics drives strategic decision-making and business innovation in the modern era...',
+    date: 'October 2025',
+    readTime: '7 min read',
+    category: 'Technical Skills',
+  },
+  {
+    slug: 'building-modern-web',
+    title: 'Building the Modern Web: From HTML to Full-Stack Applications',
+    excerpt: 'My journey through web development, from basic HTML to building complex full-stack applications with modern frameworks...',
+    date: 'September 2025',
+    readTime: '8 min read',
+    category: 'Web Development',
+  },
+  {
+    slug: 'leadership-digital-age',
+    title: 'Leadership in the Digital Age: Navigating Technology and Teams',
+    excerpt: 'Discovering the essential skills and mindset for leading technology teams in today\'s rapidly evolving digital landscape...',
+    date: 'August 2025',
+    readTime: '6 min read',
+    category: 'Leadership',
   },
 ]
 
 export default function BlogPage() {
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <ScrollReveal />
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-16 scroll-reveal">
           <div className="inline-block px-6 py-2 bg-brutalist-accent border-4 border-brutalist-black mb-6">
             <p className="text-lg font-bold">REFLECTIVE BLOG</p>
           </div>
@@ -33,15 +60,19 @@ export default function BlogPage() {
             THOUGHTS & REFLECTIONS
           </h1>
           <p className="text-xl md:text-2xl text-brutalist-gray max-w-3xl">
-            Documenting my academic journey, lessons learned, and growth experiences 
-            throughout my university career.
+            Exploring my journey through data analytics, leadership insights, and continuous learning in the digital age.
           </p>
+        </div>
+
+        {/* Add Blog Illustration */}
+        <div className="mb-16 scroll-reveal">
+          <BlogIllustration />
         </div>
 
         {/* Blog Posts Grid */}
         <div className="space-y-8">
           {blogPosts.map((post) => (
-            <article key={post.slug} className="brutalist-card p-8 md:p-12">
+            <article key={post.slug} className="brutalist-card p-8 md:p-12 scroll-reveal">
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <span className="px-4 py-2 bg-brutalist-black text-brutalist-white border-2 border-brutalist-black text-sm font-bold">
                   {post.category}

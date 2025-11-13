@@ -25,7 +25,7 @@ export default function LearningJourneyPost() {
             <div className="flex flex-wrap items-center gap-4 text-brutalist-gray">
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
-                <span className="font-bold">November 2024</span>
+                <span className="font-bold">November 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={18} />
@@ -52,6 +52,18 @@ export default function LearningJourneyPost() {
               feeling overwhelmed during my first semester, trying to balance lectures, assignments, and personal 
               life while adjusting to this new environment.
             </p>
+
+            {/* Campus Life Photo */}
+            <div className="my-8">
+              <img 
+                src="/images/IMG_20250904_133340.jpg" 
+                alt="My journey adapting to tertiary education" 
+                className="w-full rounded-lg border-4 border-brutalist-black shadow-brutalist"
+              />
+              <p className="text-center text-sm text-brutalist-gray mt-2 italic">
+                A moment of reflection during my academic journey
+              </p>
+            </div>
 
             <p className="text-lg leading-relaxed mb-6">
               What struck me most was the shift in responsibility. No one was going to chase me for assignments 

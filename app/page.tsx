@@ -2,10 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Briefcase, GraduationCap, Sparkles } from 'lucide-react'
 import TypingEffect from '@/components/TypingEffect'
+import ScrollReveal from '@/components/ScrollReveal'
+import DataIllustration from '@/components/illustrations/DataIllustration'
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <ScrollReveal />
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -19,7 +22,7 @@ export default function Home() {
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 leading-tight heading-animate">
                   HELLO, I'M
                   <br />
-                  <span className="relative inline-block">
+                  <span className="relative inline-block transition-all duration-300">
                     LEATILE KING BAAITSE
                     <div className="absolute bottom-1 sm:bottom-2 left-0 w-full h-2 sm:h-3 lg:h-4 bg-brutalist-accent -z-10"></div>
                   </span>
@@ -41,19 +44,19 @@ export default function Home() {
                     href="/blog" 
                     className="brutalist-button inline-flex items-center justify-center sm:justify-start gap-2"
                   >
-                    READ MY BLOG <ArrowRight size={12} className="sm:size-14 md:size-16 lg:size-8 xl:size-10" />
+                    READ MY BLOG <ArrowRight size={12} className="sm:size-14 md:size-16 lg:size-8 xl:size-10 animate-slide-right" />
                   </Link>
                 </div>
               </div>
               
               <div className="flex justify-center lg:justify-end">
-                <div className="relative image-animate entrance-delay-3">
-                  <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-2xl overflow-hidden shadow-brutalist-xl hover:shadow-brutalist-2xl transition-all duration-300 hover:scale-105 relative">
+                <div className="relative image-animate entrance-delay-3 hover-tilt">
+                  <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-2xl overflow-hidden shadow-brutalist-xl hover:shadow-brutalist-2xl transition-all duration-300 hover:scale-105 relative hover-slide-up">
                     <Image 
                       src="/images/Baaitse.png" 
                       alt="Leatile King Baaitse" 
                       fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      className="object-cover hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       priority
                     />
@@ -67,63 +70,107 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            
+            {/* Add Data Illustration below hero content */}
+            <div className="mt-12 lg:mt-16 scroll-reveal">
+              <DataIllustration />
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Me Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brutalist-black text-brutalist-white">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-brutalist-white text-brutalist-black">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <div className="inline-block px-6 py-2 bg-brutalist-accent border-4 border-brutalist-white mb-6">
-                <p className="text-lg font-bold">ABOUT ME</p>
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16 scroll-reveal">
+            <div className="inline-block px-6 py-2 bg-brutalist-accent border-4 border-brutalist-black mb-6">
+              <p className="text-lg sm:text-xl font-bold">ABOUT ME</p>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              WHO I AM
+            </h2>
+            <p className="text-lg sm:text-xl text-brutalist-gray max-w-3xl mx-auto leading-relaxed">
+              A passionate data analytics student on a journey to transform raw information into actionable insights
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Main About Content */}
+            <div className="lg:col-span-2 space-y-8">
+              <div className="brutalist-card p-8 lg:p-10 scroll-reveal">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-6 border-b-4 border-brutalist-accent pb-2">
+                  MY STORY
+                </h3>
+                <div className="space-y-6 text-lg leading-relaxed">
+                  <p>
+                    I'm currently pursuing my <span className="font-bold text-brutalist-accent inline-block">BSc (Hons) in Business Intelligence & Data Analytics</span> at Botswana Accountancy College, where I'm diving deep into the fascinating world of data analysis and business intelligence.
+                  </p>
+                  <p>
+                    My academic journey has been transformative, teaching me not just technical skills like <span className="font-bold text-brutalist-accent inline-block">SQL, Python, and Power BI</span>, but also critical thinking, collaboration, and adaptability—essential skills for the modern data-driven workplace.
+                  </p>
+                  <p>
+                    This portfolio represents my commitment to growth and learning, showcasing projects, reflections, and my readiness for exciting opportunities in the field of data analytics.
+                  </p>
+                </div>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                WHO I AM
-              </h2>
-              <div className="space-y-4 text-lg leading-relaxed">
-                <p>
-                  I'm currently pursuing my BSc (Hons) in Business Intelligence & Data Analytics at Botswana Accountancy College, where I'm 
-                  constantly learning and evolving both academically and professionally in the field of data analysis and business intelligence.
-                </p>
-                <p>
-                  My journey in higher education has been transformative, teaching me not just technical 
-                  skills but also critical thinking, collaboration, and adaptability—skills essential for 
-                  the modern workplace.
-                </p>
-                <p>
-                  This portfolio serves as a living document of my growth, showcasing my projects, 
-                  reflections, and readiness for opportunities like internships and professional attachments.
-                </p>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="brutalist-card p-6 text-center scroll-reveal">
+                  <div className="text-3xl sm:text-4xl font-bold text-brutalist-accent mb-2">3.8</div>
+                  <div className="text-sm font-bold">GPA</div>
+                </div>
+                <div className="brutalist-card p-6 text-center scroll-reveal">
+                  <div className="text-3xl sm:text-4xl font-bold text-brutalist-black mb-2">15+</div>
+                  <div className="text-sm font-bold">PROJECTS</div>
+                </div>
+                <div className="brutalist-card p-6 text-center scroll-reveal">
+                  <div className="text-3xl sm:text-4xl font-bold text-brutalist-black mb-2">5</div>
+                  <div className="text-sm font-bold">ARTICLES</div>
+                </div>
+                <div className="brutalist-card p-6 text-center scroll-reveal">
+                  <div className="text-3xl sm:text-4xl font-bold text-brutalist-black mb-2">2025</div>
+                  <div className="text-sm font-bold">GRADUATION</div>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="border-4 border-brutalist-white p-8 bg-brutalist-black hover:bg-brutalist-white hover:text-brutalist-black transition-all duration-300 group">
-                <GraduationCap size={48} className="mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-3">ACADEMIC FOCUS</h3>
-                <p className="text-lg">
-                  Studying Business Intelligence & Data Analytics with interests in data mining, statistical analysis, and business intelligence systems. 
-                  Maintaining strong academic performance (GPA: 3.8/4.0) while engaging in practical projects and internships.
+            {/* Side Cards */}
+            <div className="space-y-8">
+              <div className="brutalist-card p-8 bg-brutalist-accent text-brutalist-black scroll-reveal">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-brutalist-black border-4 border-brutalist-black rounded-lg flex items-center justify-center">
+                    <GraduationCap size={32} className="text-brutalist-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold">ACADEMIC FOCUS</h3>
+                </div>
+                <p className="text-lg leading-relaxed">
+                  Data mining, statistical analysis, business intelligence systems, and practical applications of analytics in real-world scenarios.
                 </p>
               </div>
 
-              <div className="border-4 border-brutalist-white p-8 bg-brutalist-black hover:bg-brutalist-white hover:text-brutalist-black transition-all duration-300 group">
-                <Briefcase size={48} className="mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-3">PROFESSIONAL GOALS</h3>
-                <p className="text-lg">
-                  Seeking opportunities to apply classroom knowledge in real-world settings through 
-                  internships and collaborative projects.
+              <div className="brutalist-card p-8 scroll-reveal">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-brutalist-black border-4 border-brutalist-black rounded-lg flex items-center justify-center">
+                    <Briefcase size={32} className="text-brutalist-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold">PROFESSIONAL GOALS</h3>
+                </div>
+                <p className="text-lg leading-relaxed">
+                  Seeking challenging internships and collaborative projects to apply classroom knowledge and make meaningful impact.
                 </p>
               </div>
 
-              <div className="border-4 border-brutalist-white p-8 bg-brutalist-black hover:bg-brutalist-white hover:text-brutalist-black transition-all duration-300 group">
-                <Sparkles size={48} className="mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold mb-3">PERSONAL INTERESTS</h3>
-                <p className="text-lg">
-                  Beyond academics, I enjoy data visualization, creating dashboards, and staying current with industry 
-                  trends in analytics, machine learning, and emerging technologies.
+              <div className="brutalist-card p-8 bg-brutalist-black text-brutalist-white scroll-reveal">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-brutalist-accent border-4 border-brutalist-black rounded-lg flex items-center justify-center">
+                    <Sparkles size={32} className="text-brutalist-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold">PASSIONS</h3>
+                </div>
+                <p className="text-lg leading-relaxed">
+                  Data visualization, dashboard creation, machine learning, and staying current with emerging analytics technologies.
                 </p>
               </div>
             </div>
@@ -134,7 +181,7 @@ export default function Home() {
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 scroll-reveal">
             <h2 className="text-4xl md:text-6xl font-bold mb-6">MY CORE VALUES</h2>
             <p className="text-xl text-brutalist-gray max-w-3xl mx-auto">
               These principles guide my academic journey and professional development
@@ -142,7 +189,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="brutalist-card p-8">
+            <div className="brutalist-card p-8 scroll-reveal">
               <div className="w-16 h-16 bg-brutalist-black flex items-center justify-center mb-6">
                 <span className="text-3xl font-bold text-brutalist-white">01</span>
               </div>
@@ -153,7 +200,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="brutalist-card p-8">
+            <div className="brutalist-card p-8 scroll-reveal">
               <div className="w-16 h-16 bg-brutalist-black flex items-center justify-center mb-6">
                 <span className="text-3xl font-bold text-brutalist-white">02</span>
               </div>
@@ -164,7 +211,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="brutalist-card p-8">
+            <div className="brutalist-card p-8 scroll-reveal">
               <div className="w-16 h-16 bg-brutalist-black flex items-center justify-center mb-6">
                 <span className="text-3xl font-bold text-brutalist-white">03</span>
               </div>
@@ -180,7 +227,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brutalist-accent">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center scroll-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             LET'S CONNECT
           </h2>

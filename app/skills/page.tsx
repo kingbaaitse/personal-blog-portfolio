@@ -1,4 +1,6 @@
 import { Code, Palette, Database, Globe, TrendingUp, Sparkles } from 'lucide-react'
+import ScrollReveal from '@/components/ScrollReveal'
+import SkillsIllustration from '@/components/illustrations/SkillsIllustration'
 
 const skills = [
   {
@@ -51,9 +53,10 @@ const projects = [
 export default function SkillsPage() {
   return (
     <div className="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <ScrollReveal />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-8 sm:mb-12 lg:mb-16">
+        <div className="mb-8 sm:mb-12 lg:mb-16 scroll-reveal">
           <div className="inline-block px-3 sm:px-4 lg:px-6 py-1 sm:py-2 bg-brutalist-accent border-2 sm:border-4 border-brutalist-black mb-4 sm:mb-6">
             <p className="text-sm sm:text-base lg:text-lg font-bold">SKILLS & PROJECTS</p>
           </div>
@@ -61,13 +64,17 @@ export default function SkillsPage() {
             WHAT I CAN DO
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brutalist-gray max-w-3xl">
-            A showcase of my technical abilities, creative skills, and hands-on project experience 
-            developed through coursework and self-directed learning.
+            A comprehensive overview of my technical skills, tools, and hands-on projects that demonstrate my capabilities in data analytics and business intelligence.
           </p>
         </div>
 
+        {/* Add Skills Illustration */}
+        <div className="mb-12 lg:mb-16 scroll-reveal">
+          <SkillsIllustration />
+        </div>
+
         {/* Skills Section */}
-        <section className="mb-12 sm:mb-16 lg:mb-20">
+        <section className="mb-12 sm:mb-16 lg:mb-20 scroll-reveal">
           <h2 className="text-4xl font-bold mb-8 pb-4 border-b-8 border-brutalist-black">
             CORE SKILLS
           </h2>
@@ -79,7 +86,7 @@ export default function SkillsPage() {
                 <div key={index} className="brutalist-card">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <div className={`p-3 sm:p-4 ${skill.color} border-2 sm:border-4 border-brutalist-black`}>
-                      <Icon size={24} className="sm:size-32 text-white" />
+                      <Icon size={32} className="text-white" />
                     </div>
                     <span className="px-3 py-1 sm:px-4 sm:py-2 bg-brutalist-black text-brutalist-white border-2 border-brutalist-black text-xs sm:text-sm font-bold">
                       {skill.level}
@@ -109,7 +116,7 @@ export default function SkillsPage() {
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             <div className="brutalist-card">
               <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <Code size={24} className="sm:size-32 flex-shrink-0" />
+                <Code size={32} className="flex-shrink-0" />
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold">PROGRAMMING & TOOLS</h3>
               </div>
               <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -123,7 +130,7 @@ export default function SkillsPage() {
 
             <div className="brutalist-card">
               <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <Globe size={24} className="sm:size-32 flex-shrink-0" />
+                <Globe size={32} className="flex-shrink-0" />
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold">DIGITAL MARKETING</h3>
               </div>
               <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -137,7 +144,7 @@ export default function SkillsPage() {
 
             <div className="brutalist-card">
               <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-                <TrendingUp size={24} className="sm:size-32 flex-shrink-0" />
+                <TrendingUp size={32} className="flex-shrink-0" />
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold">BUSINESS SKILLS</h3>
               </div>
               <div className="flex flex-wrap gap-2 sm:gap-3">

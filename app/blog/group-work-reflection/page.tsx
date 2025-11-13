@@ -25,7 +25,7 @@ export default function GroupWorkPost() {
             <div className="flex flex-wrap items-center gap-4 text-brutalist-gray">
               <div className="flex items-center gap-2">
                 <Calendar size={18} />
-                <span className="font-bold">November 2024</span>
+                <span className="font-bold">November 2025</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={18} />
@@ -50,6 +50,18 @@ export default function GroupWorkPost() {
               I can clearly see how our team progressed through each phase, and the valuable lessons learned 
               along the way.
             </p>
+
+            {/* Team Photo */}
+            <div className="my-8">
+              <img 
+                src="/images/IMG-20250925-WA0004.jpg" 
+                alt="Our team working together on the group project" 
+                className="w-full rounded-lg border-4 border-brutalist-black shadow-brutalist"
+              />
+              <p className="text-center text-sm text-brutalist-gray mt-2 italic">
+                Our team collaborating during the project's final stages
+              </p>
+            </div>
 
             <h2 className="text-3xl font-bold mt-8 mb-4 border-b-4 border-brutalist-black pb-2">
               <Users className="inline mr-3" size={32} />

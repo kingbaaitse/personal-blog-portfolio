@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, X, Sparkles } from 'lucide-react'
+import ScrollReveal from '@/components/ScrollReveal'
+import ContactIllustration from '@/components/illustrations/ContactIllustration'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -59,23 +61,24 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <ScrollReveal />
       {/* Confetti Success Dialog */}
       {showDialog && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 backdrop-blur-sm animate-fade-in">
-          <div className="relative bg-brutalist-white border-4 sm:border-8 border-brutalist-black rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-md w-full transform animate-bounce-in shadow-brutalist-2xl">
+          <div className="relative bg-brutalist-white border-4 border-brutalist-black rounded-2xl p-6 max-w-md w-full transform animate-bounce-in shadow-brutalist-2xl">
             {/* Close Button */}
             <button
               onClick={() => setShowDialog(false)}
-              className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 bg-brutalist-accent border-2 sm:border-4 border-brutalist-black rounded-full p-2 sm:p-3 hover:scale-110 transition-transform"
+              className="absolute -top-2 -right-2 bg-brutalist-accent border-2 border-brutalist-black rounded-full p-2 hover:scale-110 transition-transform"
             >
-              <X size={16} className="sm:size-20" />
+              <X size={16} />
             </button>
             
             {/* Success Icon with Animation */}
-            <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="flex justify-center mb-6">
               <div className="relative">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-brutalist-accent border-4 sm:border-8 border-brutalist-black rounded-full flex items-center justify-center animate-pulse-slow">
-                  <CheckCircle size={32} className="sm:size-40 text-brutalist-white" />
+                <div className="w-16 h-16 bg-brutalist-accent border-4 border-brutalist-black rounded-full flex items-center justify-center animate-pulse-slow">
+                  <CheckCircle size={32} className="text-brutalist-white" />
                 </div>
                 {/* Sparkles around the check */}
                 <Sparkles size={16} className="absolute -top-2 -left-2 text-brutalist-accent animate-float" />
@@ -87,10 +90,10 @@ export default function ContactPage() {
             
             {/* Success Message */}
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-brutalist-black">
+              <h2 className="text-2xl font-bold mb-4 text-brutalist-black">
                 Thank You {formData.name || 'Friend'}! 🎉
               </h2>
-              <p className="text-base sm:text-lg text-brutalist-gray mb-4 sm:mb-6 leading-relaxed">
+              <p className="text-lg text-brutalist-gray mb-6 leading-relaxed">
                 Your message has been successfully sent! I'm excited to read what you have to say and will get back to you as soon as possible.
               </p>
               
@@ -105,68 +108,73 @@ export default function ContactPage() {
                 <div className="absolute top-5 left-4/6 w-4 h-4 bg-pink-500 rounded-full animate-bounce" style={{ animationDelay: '1.2s' }}></div>
               </div>
               
-              <p className="text-sm sm:text-base text-brutalist-gray font-medium">
+              <p className="text-sm text-brutalist-gray font-medium">
                 Keep an eye on your inbox for my response! ✨
               </p>
             </div>
           </div>
         </div>
       )}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-block px-3 sm:px-4 lg:px-6 py-1 sm:py-2 bg-brutalist-accent border-2 sm:border-4 border-brutalist-black mb-4 sm:mb-6">
-            <p className="text-sm sm:text-base lg:text-lg font-bold">GET IN TOUCH</p>
+        <div className="mb-12 text-center scroll-reveal">
+          <div className="inline-block px-6 py-2 bg-brutalist-accent border-4 border-brutalist-black mb-6">
+            <p className="text-lg font-bold">GET IN TOUCH</p>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
             LET'S CONNECT
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brutalist-gray max-w-3xl">
+          <p className="text-lg md:text-xl lg:text-2xl text-brutalist-gray max-w-3xl mx-auto">
             Have a project in mind? Looking for an intern? Or just want to chat about data analytics? 
             I'd love to hear from you!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Add Contact Illustration */}
+        <div className="mb-12 scroll-reveal">
+          <ContactIllustration />
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-6">
-            <div className="brutalist-card p-8">
-              <h2 className="text-3xl font-bold mb-6">CONTACT INFO</h2>
+          <div className="space-y-6 scroll-reveal">
+            <div className="brutalist-card p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6">CONTACT INFO</h2>
               
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 p-4 border-4 border-brutalist-black dark:border-brutalist-white">
-                  <Mail size={32} className="flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Email</h3>
-                    <a href="mailto:leatile.m.baaitse@gmail.com" className="text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 border-4 border-brutalist-black dark:border-brutalist-white">
+                  <Mail size={10} className="sm:size-10 lg:size-10 flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-lg sm:text-xl font-bold mb-1">Email</h3>
+                    <a href="mailto:leatile.m.baaitse@gmail.com" className="text-base sm:text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors break-words">
                       leatile.m.baaitse@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 border-4 border-brutalist-black dark:border-brutalist-white">
-                  <Phone size={32} className="flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Phone</h3>
-                    <a href="tel:+26771419498" className="text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 border-4 border-brutalist-black dark:border-brutalist-white">
+                  <Phone size={10} className="sm:size-10 lg:size-10 flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-lg sm:text-xl font-bold mb-1">Phone</h3>
+                    <a href="tel:+26771419498" className="text-base sm:text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors">
                       +267 71 419 498
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 border-4 border-brutalist-black dark:border-brutalist-white">
-                  <MapPin size={32} className="flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-1">Location</h3>
-                    <p className="text-lg">Gaborone, Botswana</p>
+                <div className="flex items-start gap-3 sm:gap-4 p-4 border-4 border-brutalist-black dark:border-brutalist-white">
+                  <MapPin size={10} className="sm:size-10 lg:size-10 flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-lg sm:text-xl font-bold mb-1">Location</h3>
+                    <p className="text-base sm:text-lg">Gaborone, Botswana</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="brutalist-card p-8 bg-brutalist-accent dark:bg-yellow-400 text-brutalist-black">
-              <h3 className="text-2xl font-bold mb-4">AVAILABILITY</h3>
-              <p className="text-lg leading-relaxed">
+            <div className="brutalist-card p-6 sm:p-8 bg-brutalist-accent dark:bg-yellow-400 text-brutalist-black">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">AVAILABILITY</h3>
+              <p className="text-base sm:text-lg leading-relaxed">
                 Currently seeking internship opportunities and open to freelance projects. 
                 Available for full-time positions starting Summer 2025.
               </p>
@@ -174,19 +182,19 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="brutalist-card p-8">
-            <h2 className="text-3xl font-bold mb-6">SEND A MESSAGE</h2>
+          <div className="brutalist-card p-6 sm:p-8">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">SEND A MESSAGE</h2>
 
             {status === 'error' && (
               <div className="mb-6 p-4 bg-red-100 dark:bg-red-900 border-4 border-brutalist-black dark:border-red-500 flex items-center gap-3">
                 <CheckCircle size={24} className="text-red-600 dark:text-red-400" />
-                <p className="font-bold">Failed to send message. Please try again or email me directly.</p>
+                <p className="font-bold text-sm sm:text-base">Failed to send message. Please try again or email me directly.</p>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-lg font-bold mb-2">
+                <label htmlFor="name" className="block text-base sm:text-lg font-bold mb-2">
                   YOUR NAME *
                 </label>
                 <input
@@ -196,13 +204,13 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="brutalist-input w-full"
+                  className="brutalist-input w-full text-base sm:text-lg"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-lg font-bold mb-2">
+                <label htmlFor="email" className="block text-base sm:text-lg font-bold mb-2">
                   YOUR EMAIL *
                 </label>
                 <input
@@ -212,13 +220,13 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="brutalist-input w-full"
+                  className="brutalist-input w-full text-base sm:text-lg"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-lg font-bold mb-2">
+                <label htmlFor="subject" className="block text-base sm:text-lg font-bold mb-2">
                   SUBJECT *
                 </label>
                 <input
@@ -228,13 +236,13 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="brutalist-input w-full"
+                  className="brutalist-input w-full text-base sm:text-lg"
                   placeholder="Internship Opportunity"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-lg font-bold mb-2">
+                <label htmlFor="message" className="block text-base sm:text-lg font-bold mb-2">
                   MESSAGE *
                 </label>
                 <textarea
@@ -244,7 +252,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="brutalist-input w-full resize-none"
+                  className="brutalist-input w-full resize-none text-base sm:text-lg"
                   placeholder="Tell me about your project or opportunity..."
                 />
               </div>
@@ -252,7 +260,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="brutalist-button w-full inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="brutalist-button w-full inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed text-base sm:text-lg py-3 sm:py-4"
               >
                 {status === 'sending' ? (
                   <>SENDING...</>
@@ -269,17 +277,17 @@ export default function ContactPage() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="inline-block p-8 border-4 border-brutalist-black dark:border-brutalist-white bg-brutalist-white dark:bg-gray-900">
-            <p className="text-2xl font-bold mb-4">PREFER SOCIAL MEDIA?</p>
-            <p className="text-lg text-brutalist-gray dark:text-gray-400 mb-6">
+          <div className="inline-block p-6 sm:p-8 border-4 border-brutalist-black dark:border-brutalist-white bg-brutalist-white dark:bg-gray-900">
+            <p className="text-xl sm:text-2xl font-bold mb-4">PREFER SOCIAL MEDIA?</p>
+            <p className="text-base sm:text-lg text-brutalist-gray dark:text-gray-400 mb-6">
               Connect with me on all platforms and follow my journey
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto">
               <a 
                 href="https://linkedin.com/in/kingbaaitse" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-[#E8F4F8] text-[#0077B5] px-4 py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-[#E8F4F8] text-[#0077B5] px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <img src="/images/linkedin.png" alt="LinkedIn" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>LINKEDIN</span>
@@ -288,7 +296,7 @@ export default function ContactPage() {
                 href="https://github.com/kingbaaitse" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-[#F6F8FA] text-[#333333] px-4 py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-[#F6F8FA] text-[#333333] px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <img src="/images/github.png" alt="GitHub" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>GITHUB</span>
@@ -297,7 +305,7 @@ export default function ContactPage() {
                 href="https://twitter.com/kingbaaitse" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-[#F7F9FA] text-[#000000] px-4 py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-[#F7F9FA] text-[#000000] px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <img src="/images/twitter.png" alt="X" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>X</span>
@@ -306,7 +314,7 @@ export default function ContactPage() {
                 href="https://instagram.com/kingbaaitse" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-gradient-to-br from-[#FFF5F5] via-[#FFF0F5] to-[#F5F0FF] text-[#E4405F] px-4 py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-gradient-to-br from-[#FFF5F5] via-[#FFF0F5] to-[#F5F0FF] text-[#E4405F] px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <img src="/images/instagram.png" alt="Instagram" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>INSTAGRAM</span>
@@ -315,7 +323,7 @@ export default function ContactPage() {
                 href="https://facebook.com/kingbaaitse" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-[#E8F4FD] text-[#1877F2] px-4 py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-[#E8F4FD] text-[#1877F2] px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <img src="/images/facebook.png" alt="Facebook" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>FACEBOOK</span>
@@ -324,7 +332,7 @@ export default function ContactPage() {
                 href="https://threads.net/kingbaaitse" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-[#F8F8F8] text-[#000000] px-4 py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="bg-[#F8F8F8] text-[#000000] px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm font-bold border-4 border-brutalist-black shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <img src="/images/threads.png" alt="Threads" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>THREADS</span>

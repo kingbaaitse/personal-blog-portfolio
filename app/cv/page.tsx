@@ -1,12 +1,15 @@
 import { Download, Mail, Phone, MapPin, Award, BookOpen, Briefcase, Code, GraduationCap } from 'lucide-react'
 import Image from 'next/image'
+import ScrollReveal from '@/components/ScrollReveal'
+import CVIllustration from '@/components/illustrations/CVIllustration'
 
 export default function CVPage() {
   return (
     <div className="min-h-screen py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <ScrollReveal />
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="brutalist-section mb-6 sm:mb-8">
+        <div className="brutalist-section mb-6 sm:mb-8 scroll-reveal">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full lg:w-auto">
               <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-4 border-brutalist-black flex-shrink-0 relative">
@@ -55,6 +58,11 @@ export default function CVPage() {
           </div>
         </div>
 
+        {/* Add CV Illustration */}
+        <div className="mb-8 lg:mb-12">
+          <CVIllustration />
+        </div>
+
         {/* Education */}
         <div className="brutalist-card p-8 mb-8">
           <div className="flex items-center gap-3 mb-6">
@@ -69,7 +77,7 @@ export default function CVPage() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                 <h3 className="text-2xl font-bold">BSc (Hons) in Business Intelligence & Data Analytics</h3>
                 <span className="inline-block px-4 py-1 bg-brutalist-accent border-2 border-brutalist-black text-sm font-bold">
-                  2022 - PRESENT
+                  2023 - Present
                 </span>
               </div>
               <p className="text-xl font-bold text-brutalist-gray mb-2">Botswana Accountancy College</p>
@@ -108,7 +116,7 @@ export default function CVPage() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                 <h3 className="text-2xl font-bold">Data Analytics Intern</h3>
                 <span className="inline-block px-4 py-1 bg-brutalist-accent border-2 border-brutalist-black text-sm font-bold">
-                  Jun 2024 - Aug 2024
+                  Jun 2025 - Aug 2025
                 </span>
               </div>
               <p className="text-xl font-bold text-brutalist-gray mb-3">Botswana Innovation Hub, Gaborone</p>
@@ -123,7 +131,7 @@ export default function CVPage() {
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                 <h3 className="text-2xl font-bold">Teaching Assistant - Data Science</h3>
                 <span className="inline-block px-4 py-1 bg-brutalist-black text-brutalist-white border-2 border-brutalist-black text-sm font-bold">
-                  Jan 2024 - May 2024
+                  Jan 2025 - May 2025
                 </span>
               </div>
               <p className="text-xl font-bold text-brutalist-gray mb-3">Botswana Accountancy College</p>
@@ -292,7 +300,7 @@ export default function CVPage() {
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-1">Microsoft Power BI Certification</h3>
-                <p className="text-lg text-brutalist-gray mb-1">Microsoft • 2024</p>
+                <p className="text-lg text-brutalist-gray mb-1">Microsoft • 2025</p>
                 <p className="text-base text-brutalist-gray">Data visualization and business intelligence professional certification</p>
               </div>
             </div>
@@ -303,7 +311,7 @@ export default function CVPage() {
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-1">Dean's List Excellence</h3>
-                <p className="text-lg text-brutalist-gray mb-1">Botswana Accountancy College • 2023, 2024</p>
+                <p className="text-lg text-brutalist-gray mb-1">Botswana Accountancy College • 2023, 2025</p>
                 <p className="text-base text-brutalist-gray">Recognized for outstanding academic performance and leadership</p>
               </div>
             </div>

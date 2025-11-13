@@ -57,7 +57,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-2 animate-fadeInUp">
+          <div className="md:hidden pb-4 space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
