@@ -1,0 +1,448 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Original Brutalist Color Palette */
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-on-light: #000000;
+  --text-on-accent: #ffffff;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7f7;
+  --bg-card: #ffffff;
+  --bg-accent: #ff6b35;
+  --border-color: #000000;
+  --border-dark: #000000;
+}
+
+* {
+  border-color: var(--border-color);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+}
+
+@layer components {
+  .brutalist-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    @apply border-2 sm:border-4 p-4 sm:p-6 md:p-8 shadow-brutalist transition-all duration-300 hover:shadow-brutalist-lg;
+  }
+  
+  .brutalist-button {
+    background-color: var(--bg-accent);
+    color: var(--text-on-accent);
+    border-color: var(--border-color);
+    @apply font-bold px-1.5 sm:px-2 md:px-3 lg:px-2 xl:px-3 py-0.5 sm:py-1 md:py-1.5 lg:py-1 xl:py-1.5 border-2 sm:border-4 lg:border-2 xl:border-4 shadow-brutalist transition-all duration-300 text-xs sm:text-xs md:text-sm lg:text-xs xl:text-sm flex items-center justify-center;
+  }
+  
+  .brutalist-button:hover {
+    @apply shadow-brutalist-lg;
+  }
+  
+  .brutalist-button:active {
+    transform: translateY(2px) translateX(2px);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  }
+  
+  .brutalist-input {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    @apply border-2 sm:border-4 px-3 sm:px-4 py-2 sm:py-3 font-bold shadow-brutalist-sm transition-all duration-300 focus:outline-none focus:shadow-brutalist-hover focus:scale-105 text-sm sm:text-base;
+  }
+  
+  .brutalist-textarea {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    @apply border-2 sm:border-4 px-3 sm:px-4 py-2 sm:py-3 font-bold shadow-brutalist-sm transition-all duration-300 focus:outline-none focus:shadow-brutalist-hover focus:scale-105 resize-none text-sm sm:text-base;
+  }
+  
+  .brutalist-section {
+    background-color: var(--bg-primary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+    @apply border-4 sm:border-8 p-4 sm:p-6 md:p-8 lg:p-12 transition-all duration-300;
+  }
+  
+  .accent-bg {
+    background-color: var(--bg-accent);
+    color: var(--text-on-accent);
+    @apply transition-all duration-300;
+  }
+  
+  /* Theme-aware text classes */
+  .text-primary {
+    color: var(--text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  
+  .text-on-light {
+    color: var(--text-on-light);
+  }
+  
+  .text-on-accent {
+    color: var(--text-on-accent);
+  }
+  
+  /* Theme-aware background classes */
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+  
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+  
+  .bg-card {
+    background-color: var(--bg-card);
+  }
+  
+  .bg-accent {
+    background-color: var(--bg-accent);
+  }
+  
+  /* Responsive navigation items */
+  .nav-item {
+    @apply transition-all duration-300 hover:shadow-brutalist-sm hover:scale-105;
+  }
+  
+  /* Responsive animated links */
+  .animated-link {
+    @apply transition-all duration-300 hover:shadow-brutalist-sm;
+  }
+  
+  /* Responsive animated cards with stagger */
+  .card-animate {
+    @apply entrance-animation hover:shadow-brutalist-lg hover:scale-105;
+  }
+  
+  /* Responsive animated headings */
+  .heading-animate {
+    @apply entrance-animation;
+  }
+  
+  /* Responsive animated text elements */
+  .text-animate {
+    @apply entrance-animation;
+  }
+  
+  /* Responsive animated images */
+  .image-animate {
+    @apply entrance-animation hover:scale-105 transition-all duration-300;
+  }
+  
+  .accent-border {
+    border-color: var(--bg-accent);
+  }
+  
+  /* Responsive grid layouts */
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  .responsive-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  /* Responsive containers */
+  .responsive-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Responsive text sizes */
+  .responsive-title {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold;
+  }
+  
+  .responsive-subtitle {
+    @apply text-xl sm:text-2xl md:text-3xl font-bold;
+  }
+  
+  .responsive-text {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .responsive-small-text {
+    @apply text-xs sm:text-sm md:text-base;
+  }
+  
+  /* Responsive spacing */
+  .responsive-padding {
+    @apply p-4 sm:p-6 md:p-8 lg:p-12;
+  }
+  
+  .responsive-margin {
+    @apply m-4 sm:m-6 md:m-8 lg:m-12;
+  }
+  
+  .responsive-gap {
+    @apply gap-2 sm:gap-4 md:gap-6 lg:gap-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0deg) scale(1);
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-typing {
+    overflow: hidden;
+    border-right: 3px solid;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink .75s step-end infinite;
+  }
+  
+  .animate-loading {
+    animation: loading 1.5s ease-in-out infinite;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-rotate-in {
+    animation: rotateIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  /* Stagger animations for lists */
+  .animate-stagger-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-stagger-2 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-stagger-3 {
+    animation-delay: 0.3s;
+  }
+  
+  .animate-stagger-4 {
+    animation-delay: 0.4s;
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-bounce {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  /* Hover effects */
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-rotate:hover {
+    transform: rotate(2deg);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  }
+  
+  /* Entrance animations for page load */
+  .entrance-animation {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .entrance-delay-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .entrance-delay-2 {
+    animation-delay: 0.2s;
+  }
+  
+  .entrance-delay-3 {
+    animation-delay: 0.3s;
+  }
+  
+  .entrance-delay-4 {
+    animation-delay: 0.4s;
+  }
+}
+
