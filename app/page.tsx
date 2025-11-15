@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { ArrowRight, Briefcase, GraduationCap, Sparkles } from 'lucide-react'
 import TypingEffect from '@/components/TypingEffect'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -52,13 +51,10 @@ export default function Home() {
               <div className="flex justify-center lg:justify-end">
                 <div className="relative image-animate entrance-delay-3 hover-tilt">
                   <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-2xl overflow-hidden shadow-brutalist-xl hover:shadow-brutalist-2xl transition-all duration-300 hover:scale-105 relative hover-slide-up">
-                    <Image 
+                    <img 
                       src="/images/Baaitse.png" 
                       alt="Leatile King Baaitse" 
-                      fill
-                      className="object-cover hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      priority
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
                       <div className="bg-brutalist-accent border-2 sm:border-4 border-brutalist-black px-2 sm:px-3 py-1.5 sm:py-2 md:py-3 inline-block">

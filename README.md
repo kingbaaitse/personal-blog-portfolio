@@ -2,6 +2,8 @@
 
 This project demonstrates academic journey reflection, professional development, and technical skills through a modern web application I built with Next.js, React, TypeScript, and Tailwind CSS.
 
+Visit website on https://kingbaaitse.oratoryleague.com
+
 ## Assignment Requirements & Implementation
 
 ### Blog Structure, Layout, and Ease of Navigation

@@ -1,5 +1,4 @@
 import { Download, Mail, Phone, MapPin, Award, BookOpen, Briefcase, Code, GraduationCap } from 'lucide-react'
-import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 import CVIllustration from '@/components/illustrations/CVIllustration'
 
@@ -13,12 +12,10 @@ export default function CVPage() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full lg:w-auto">
               <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 sm:border-4 border-brutalist-black flex-shrink-0 relative">
-                <Image 
+                <img 
                   src="/images/Baaitse.png" 
                   alt="Leatile King Baaitse" 
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="w-full">
