@@ -128,3 +128,6 @@ personal-blog-portfolio/
 
 ## Deployment
 - **GitHub Pages**: With static export
+
+
+**⚠️ Network Access Notice:** Please note that this website may not be accessible when using the school internet network due to Fortinet security restrictions. If you encounter access issues, please try viewing the site using a personal internet connection or mobile data.
