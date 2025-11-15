@@ -1,66 +1,94 @@
-# Personal Blog Portfolio
+# Leatile King Baaitse's Digital Blog Portfolio
 
-A modern, brutalist-design personal blog portfolio built with Next.js, React, TypeScript, and Tailwind CSS. My project showcases academic and professional development with a unique aesthetic approach.
+This project demonstrates academic journey reflection, professional development, and technical skills through a modern web application I built with Next.js, React, TypeScript, and Tailwind CSS.
+
+## Assignment Requirements & Implementation
+
+### Blog Structure, Layout, and Ease of Navigation
+- **Responsive Design**: Mobile-first approach with brutalist aesthetic.
+- **Intuitive Navigation**: Clear menu structure with smooth scrolling.
+- **Consistent Layout**: Unified design system across all pages.
+- **Accessibility**: Semantic HTML and proper heading hierarchy.
+
+### About Me Page Professionalism
+- **Professional Introduction**: Personal background and academic goals.
+- **Contact Information**: Updated email and phone details.
+- **Professional Photo**: High-quality profile image.
+- **Clean Presentation**: Well-organized content sections.
+
+### Reflective Writing on Academic Journey
+- **Blog Post**: `/blog/learning-journey/`
+- **Content**: Personal growth, challenges, and achievements.
+- **Critical Thinking**: Analysis of learning experiences.
+- **Future Goals**: Academic and career aspirations.
+
+### Reflective Writing on Group Work Experience
+- **Blog Post**: `/blog/group-work-reflection/`
+- **Tuckman's Model**: Analysis of forming, storming, norming, performing stages.
+- **Team Dynamics**: Reflection on collaboration and communication
+- **Lessons Learned**: Insights from group project experiences
+
+### Skills/Projects Showcased
+- **Technical Skills**: Programming languages, tools, and technologies.
+- **Featured Projects**: Three detailed project showcases with:
+  - Social Media Calendar (React, Node.js, MongoDB).
+  - Student Data Dashboard (Power BI, SQL, Python).
+  - Web Scraping Tool (Python, BeautifulSoup, Pandas).
+- **Soft Skills**: Communication, teamwork, problem-solving.
+- **Certifications**: Microsoft Power BI, Data Science Fundamentals.
+
+### Application Letter
+ **Location**: `public\baaitse_leatile_november2025_A03_(industrial_attachment_letter).pdf`
+- **Professional Format**: Proper business letter structure.
+- **Personalization**: Tailored content for specific opportunities.
+- **Clear Objectives**: Career goals and availability.
+- **Contact Integration**: Easy access to contact information.
+
+### Email Template
+- **Location**: `public\baaitse_leatile_november2025_A03_(email_template).pdf`
+- **Professional Format**: Proper business letter structure.
+- **Personalization**: Tailored content for specific opportunities.
+- **Clear Objectives**: Career goals and availability.
+- **Contact Integration**: Easy access to contact information.
+
+### CV Presentation and Formatting
+- **Location**: `public\baaitse_leatile_november2025_A03_(cv).pdf`
+- **Downloadable CV**: PDF download functionality.
+- **Professional Layout**: Clean, organized sections.
+- **Complete Information**: Education, experience, skills, certifications.
+- **Modern Design**: Brutalist aesthetic with professional presentation.
+
+### Overall Blog Presentation and Creativity
+- **Unique Design**: Brutalist design philosophy.
+- **Visual Elements**: Custom illustrations and icons.
+- **Interactive Features**: Smooth animations and transitions.
+- **Creative Content**: Engaging and original writing style.
 
 ## Features
 
-### ✨ Core Pages
+### Core Pages
+- **Home/About Me** - Personal introduction and professional background.
+- **CV/Resume** - Comprehensive curriculum vitae with download functionality.
+- **Blog** - Reflective posts on academic journey and group work.
+- **Skills & Projects** - Technical abilities and project showcase
+- **Resources** - Study tips and learning resources.
+- **Contact** - Professional contact form and information.
 
-- **Home/About Me** - Personal introduction, academic background, and professional interests
-- **CV/Resume** - Comprehensive curriculum vitae with education, experience, skills, and certifications
-- **Blog** - Reflective posts including:
-  - Learning Journey reflection
-  - Group Work Experience analysis using Tuckman's model
-- **Skills & Projects** - Showcase of technical abilities with 3 featured projects
-- **Study Resources** - Curated study tips, techniques, and recommended tools
-
-### 🎨 Design
-
-- **Brutalist Aesthetic** - Bold, geometric design with strong visual hierarchy
-- **Google Product Sans Font** - Modern, clean typography
-- **Responsive Layout** - Mobile-first design that works on all devices
-- **Modern UI** - TailwindCSS with custom brutalist components
+### Design Elements
+- **Brutalist Aesthetic** - Bold, geometric design with strong visual hierarchy.
+- **Google Product Sans Font** - Modern, clean typography.
+- **Responsive Layout** - Mobile-first design that works on all devices.
+- **Interactive Components** - Smooth animations and micro-interactions.
 
 ## Tech Stack
 
-- **Framework:** Next.js 14 (React 18)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide React
-- **Font:** Google Product Sans
+- **Framework:** Next.js 14 (React 18).
+- **Language:** TypeScript.
+- **Styling:** Tailwind CSS.
+- **Icons:** Lucide React.
+- **Font:** Google Product Sans.
+- **Form Handling:** FormSubmit.co.
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. Navigate to the project directory:
-```bash
-cd personal-blog-portfolio
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
 
 ## Project Structure
 
@@ -69,88 +97,34 @@ personal-blog-portfolio/
 ├── app/
 │   ├── layout.tsx          # Root layout with navigation
 │   ├── page.tsx            # Home/About Me page
-│   ├── globals.css         # Global styles
+│   ├── globals.css         # Global styles and brutalist design
 │   ├── cv/
-│   │   └── page.tsx        # CV/Resume page
+│   │   └── page.tsx        # CV/Resume page with download
 │   ├── blog/
 │   │   ├── page.tsx        # Blog listing
 │   │   ├── learning-journey/
-│   │   │   └── page.tsx    # Learning reflection post
+│   │   │   └── page.tsx    # Academic journey reflection
 │   │   └── group-work-reflection/
-│   │       └── page.tsx    # Group work reflection post
+│   │       └── page.tsx    # Group work analysis
 │   ├── skills/
 │   │   └── page.tsx        # Skills and projects showcase
-│   └── resources/
-│       └── page.tsx        # Study tips and resources
+│   ├── resources/
+│   │   └── page.tsx        # Study tips and resources
+│   └── contact/
+│       └── page.tsx        # Contact form and information
 ├── components/
-│   └── Navigation.tsx      # Navigation component
-├── public/                 # Static assets
-├── tailwind.config.js      # Tailwind configuration
-├── tsconfig.json          # TypeScript configuration
-└── package.json           # Project dependencies
-
+│   ├── Navigation.tsx      # Navigation component
+│   ├── ScrollReveal.tsx    # Animation component
+│   └── illustrations/      # Custom SVG illustrations
+├── public/
+│   └── images/             # Static assets
+│   └── baaitse_leatile_november2025_A03_(cv).pdf     # CV PDF
+│   └── baaitse_leatile_november2025_A03_(email_template).pdf     # Email Template PDF
+│   └── baaitse_leatile_november2025_A03_(application_letter).pdf     # Application Letter PDF
+├── hooks/
+│   └── useScrollAnimation.ts # Custom hook for animations
+└── Configuration files
 ```
-
-## Customization
-
-### Personalizing Content
-
-1. **About Me Section** - `app/page.tsx`
-2. **CV Details** - `app/cv/page.tsx`
-3. **Blog Posts** - `app/blog/*/page.tsx`
-4. **Skills** - `app/skills/page.tsx`
-5. **Resources** - `app/resources/page.tsx`
-
-### Styling
-
-- Colours and design tokens are configured in `tailwind.config.js`
-- Custom brutalist components are defined in `app/globals.css`
-
-### Adding New Pages
-
-You can also new page files in the `app/` directory following Next.js App Router conventions, just play around with it.
-
-## Design Philosophy
-
-This portfolio embraces a **brutalist design** approach:
-
-- **Bold Typography** - Large, impactful text hierarchy
-- **Sharp Borders** - Strong 4-8px black borders
-- **Box Shadows** - Distinctive offset shadows for depth
-- **Limited Color Palette** - Black, white, gray, and accent red
-- **Geometric Shapes** - Clean, rectangular components
-- **High Contrast** - Maximum readability and visual impact
 
 ## Deployment
-
-This Next.js app can be easily deployed to:
-
-- **Vercel** (which I highly recommend) - Zero-config deployment
-- **Netlify** - Static site generation
-- **GitHub Pages** - With static export
-- **Any Node.js hosting** - VPS, DigitalOcean, etc.
-
-### Deploy to Vercel
-
-```bash
-npx vercel
-```
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
-
-This project is open source and available for personal and educational use.
-
-## Contact
-
-Feel free to use this codebase and customize it to showcase your unique journey!
-
----
-
-Built with ❤️ and that good Leatile effect using Next.js and modern web standards.
+- **GitHub Pages**: With static export

@@ -26,7 +26,7 @@ export default function ContactPage() {
       submitData.append('subject', formData.subject)
       submitData.append('message', formData.message)
       
-      const response = await fetch('https://formsubmit.co/leatile.m.baaitse@gmail.com', {
+      const response = await fetch('https://formsubmit.co/leatile.baaitse@gmail.com', {
         method: 'POST',
         body: submitData,
         headers: {
@@ -146,8 +146,8 @@ export default function ContactPage() {
                   <Mail size={10} className="sm:size-10 lg:size-10 flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
                   <div className="min-w-0 flex-1">
                     <h3 className="text-lg sm:text-xl font-bold mb-1">Email</h3>
-                    <a href="mailto:leatile.m.baaitse@gmail.com" className="text-base sm:text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors break-words">
-                      leatile.m.baaitse@gmail.com
+                    <a href="mailto:leatile.baaitse@gmail.com" className="text-base sm:text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors break-words">
+                      leatile.baaitse@gmail.com
                     </a>
                   </div>
                 </div>
@@ -156,8 +156,8 @@ export default function ContactPage() {
                   <Phone size={10} className="sm:size-10 lg:size-10 flex-shrink-0 text-brutalist-accent dark:text-yellow-400" />
                   <div className="min-w-0 flex-1">
                     <h3 className="text-lg sm:text-xl font-bold mb-1">Phone</h3>
-                    <a href="tel:+26771419498" className="text-base sm:text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors">
-                      +267 71 419 498
+                    <a href="tel:+26771419499" className="text-base sm:text-lg hover:text-brutalist-accent dark:hover:text-yellow-400 transition-colors">
+                      +267 71 419 499
                     </a>
                   </div>
                 </div>

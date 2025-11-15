@@ -26,11 +26,11 @@ export default function CVPage() {
                 <div className="space-y-1 sm:space-y-2">
                   <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm">
                     <Mail size={10} className="sm:size-12 md:size-14 lg:size-8 xl:size-10" />
-                    <span className="break-all">leatile.m.baaitse@gmail.com</span>
+                    <span>leatile.baaitse@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm">
                     <Phone size={10} className="sm:size-12 md:size-14 lg:size-8 xl:size-10" />
-                    <span>+267 71 419 498</span>
+                    <span>+267 71 419 499</span>
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm">
                     <MapPin size={10} className="sm:size-12 md:size-14 lg:size-8 xl:size-10" />
@@ -39,10 +39,14 @@ export default function CVPage() {
                 </div>
               </div>
             </div>
-            <button className="brutalist-button inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm">
+            <a 
+              href="/baaitse_leatile_november2025_A03_(cv).pdf" 
+              download 
+              className="brutalist-button inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm"
+            >
               <Download size={10} className="sm:size-12 md:size-14 lg:size-8 xl:size-10" />
               DOWNLOAD PDF
-            </button>
+            </a>
           </div>
 
           {/* Profile Summary */}
@@ -333,10 +337,14 @@ export default function CVPage() {
         <div className="mt-12 text-center">
           <div className="inline-block p-8 border-4 border-brutalist-black bg-brutalist-accent">
             <p className="text-2xl font-bold mb-4">INTERESTED IN WORKING TOGETHER?</p>
-            <button className="brutalist-button inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm">
+            <a 
+              href="/baaitse_leatile_november2025_A03_(cv).pdf" 
+              download 
+              className="brutalist-button inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-xs md:text-sm"
+            >
               <Download size={12} className="sm:size-14 md:size-16 lg:size-10 xl:size-12" />
               DOWNLOAD FULL CV
-            </button>
+            </a>
           </div>
         </div>
       </div>
